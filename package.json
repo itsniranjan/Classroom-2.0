@@ -1,0 +1,66 @@
+{
+  "name": "classroom-2.0",
+  "version": "0.1.0",
+  "description": "A new way of online learning",
+  "author": "Abil Savio",
+  "main": "public/electron.js",
+  "build": {
+    "appId": "com.classroom.Classroom-2.0",
+    "productName": "Classroom 2.0",
+    "icon": "public/icon.png"
+  },
+  "homepage": "./",
+  "dependencies": {
+    "electron-is-dev": "^2.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "build": "npm run react-build && npm run electron-build",
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.6.1",
+    "@types/react": "^17.0.8",
+    "@types/react-dom": "^17.0.5",
+    "@types/react-router": "^5.1.14",
+    "@types/react-router-dom": "^5.1.7",
+    "concurrently": "^6.2.0",
+    "cross-env": "^7.0.3",
+    "electron": "13.0.1",
+    "electron-builder": "^22.10.5",
+    "react-scripts": "^4.0.3",
+    "typescript": "^4.3.2",
+    "wait-on": "^5.3.0",
+    "web-vitals": "^1.1.2"
+  }
+}
