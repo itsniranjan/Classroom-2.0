@@ -28,8 +28,7 @@ We reimagined the classroom world in the virtual platform by creating a desktop 
 
 ## Implementation
 
-The desktop app is created using electron - an open source framework developed by GitHub. 
-The audio video streams are enabled by WebRTC
+Now more about the implementation of the software. As we are having a demand for separate logins for both teacher and student in the same place, we are using Firebase for its excellent authorization functions and easy to use SDK. We are providing the option to either login via Email or Google. The user auth data is stored in Firestore so that we can also integrate the user role i.e. whether the teacher is Teacher or Student. In the client app as we are using React.js, we can apply conditional rendering depending on the user role, so that both teacher and student get separate layouts. The video call is facilitated by WebRTC - a free open source project providing Real Time Communication (RTC). The SDP protocols are stored in a different Firestore Collection. This will be implemented for a teacher and the connection request is also sent to Firestore for validation and data can be transmitted between the users. To implement a voice channel between benchmates we can also spin up a SDP connection when the seats are chosen, and the data is monitored. If it exceeds a threshold then a request is sent to the teacher via a cloud function. The teacher can disable the frame of the desktop app and make it full screen and the on screen time is recorded for the attendance and a .csv file with the data is generated and shared with the teacher.
 
 ## Redefining meetings 
 
